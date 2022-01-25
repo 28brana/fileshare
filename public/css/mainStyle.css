@@ -1,0 +1,243 @@
+:root{
+    --primaryColor:#7D6BFB;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F4FD;
+    height: 100vh;
+}
+
+form{
+    background-color: white;
+    border-radius: 10px;
+    /* border:2px solid red; */
+    padding: 1em;
+    width: 500px;
+    box-shadow: -8px 10px 10px 4px #c4c1de5e, -9px 16px 15px 3px #7d6bfb33;
+
+}
+
+#upload-container{
+    border-radius: 10px;
+    border:4px dotted var(--primaryColor);
+    padding: 1em;
+    
+}
+
+.bg-changer{
+    background-color: #7e6bfbb6;
+}
+
+.icon{
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img{
+    position: absolute;
+    width:3.5em;
+    transform: none;
+    transition: transform 1s ease-in-out;
+}
+
+.icon img:nth-child(1){
+    z-index: 1;
+}
+.icon-animation img:nth-child(2){
+    transform-origin: left bottom;
+   transform:  rotate(
+-12deg
+) translateX(-37px) scale(0.9);
+}
+.icon-animation img:nth-child(3){
+    transform-origin: right bottom;
+transform: rotate(
+11deg
+) translateX(37px) scale(0.9);
+
+}
+
+#text-container{
+    text-align: center;
+    
+}
+#text{
+    font-size: 1.1rem;
+    padding: 0 7em;
+    font-weight: bolder;
+}
+#text-container span{
+    color: var(--primaryColor);
+    font-weight: bolder;
+
+}
+
+#text2{
+    margin: 1em 0 0 0;
+    font-size: 0.9rem;
+}
+
+#text2 span{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness:2px ;
+}
+
+
+input[type="submit"]{
+    margin: 1.4em auto;
+    display: block;
+    
+    padding: 0.8em 1.7em;
+    font-weight: bolder;
+    color: white;
+    background-color: var(--primaryColor);
+    border:none;
+    border-radius: 10px;
+
+}
+
+
+#file-input{
+    display: none;
+}
+
+
+/* ---------------------------- */
+
+#progress-bar{
+    margin: 1em;
+    display: none;
+    height: 60px;
+    position: relative;
+    border:1px solid grey;
+    border-radius: 10px;
+    padding: 0 1em;
+}
+
+#progress-bg{
+    left: 0;
+    position: absolute;
+    width: 0%;
+    background-color: #8976ffd0;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+
+#progress-text{
+    top:5px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* --------------------------*/
+#link-container {
+    display: none;
+}
+
+#link-container p{
+
+    text-align: center;
+
+}
+
+#link {
+    margin: 1em 0;
+
+    position: relative;
+}
+
+#link img{
+    position: absolute;
+    right: 4px;
+    top: 5px;
+}
+#link input{
+    border:2px dashed var(--primaryColor);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.4em;
+    background-color: #7e6bfb3d;
+
+}
+
+#link input:focus{
+    outline: none;
+}
+
+/* ---------------------------------- */
+#email-form{
+    
+    margin: 1em;
+    padding: 1em;
+    border:2px solid var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    display: none;
+    
+}
+
+.email-input{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+   
+}
+
+.email-input input{
+    border:none;
+    border-bottom: 2px solid var(--primaryColor);
+}
+
+.email-input input:focus{
+    outline: none;
+    border-radius: 5px;
+    background-color: #725cff23;
+}
+
+#send{
+    display: block;
+    margin: 1em auto;
+    background-color: #715cff5e;
+    color: #7D6BFB;
+    border:none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.7em 1.5em;
+}
+
+/* ------------------------ */
+
+#alert-box{
+    
+    border:2px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+    color: white;
+
+    padding: 1em 4em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: absolute;
+    top:-100px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.show-alert{
+    transform: translateY(150px);
+
+}

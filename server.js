@@ -17,7 +17,7 @@ connectDB();
 
 // Cors 
 const corsOptions = {
-  origin: process.env.ALLOWED_CLIENTS.split(',')
+  origin: ["http://127.0.0.1:5500"]
   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
 }
 
@@ -25,6 +25,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 // Routes
+
 
 app.use('/api/files',require('./routes/files'));
 

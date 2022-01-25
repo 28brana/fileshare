@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/mainStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" action="" name="myfile">
+      
+        <div id="upload-container" >
+            <div  class="icon ">
+                <img src="icons/Card1.svg" alt="svg">
+                <img src="icons/Card2.svg" alt="svg">
+                <img src="icons/Card3.svg" alt="svg">
+            </div>
+            <div id="text-container">
+                <p id="text">Drag & drop <span>images</span> , <span>videos</span> or any <span>file</span> </p>
+                <input type="file" id="file-input">
+                <p id="text2">or <span id="browse-btn">browse files</span> on your computer</p>
+            </div>
+        </div>
+        <input id="submit-btn" type="submit" value="upload">
+
+        <div id="progress-bar">
+            <div id="progress-bg"></div>
+            <div id="progress-text">
+                <div >Uploading...</div>
+                <div id="progress-precent">0%</div>
+            </div>
+        </div>
+
+        <div id="link-container">
+            <p>Link expires in 24 hrs</p>
+            <div id="link">
+                <input type="text" id="link-input">
+                <img id="clipboard" src="icons/copy-icon.svg" alt="clipboard">
+            </div>
+            <p>Or send via Email</p>
+        </div>
+
+        <div id="email-form">
+            <div class="email-input">
+                <label for="your-email">Your email</label>
+                <input type="text" id="your-email">
+            </div>
+            <div class="email-input">
+                <label for="receiver-email">Receiver's email</label>
+                <input type="text" id="receiver-email">
+            </div>
+            <div>
+                <button type="button" id="send">Send</button>
+            </div>
+            
+        </div>
+
+    </form>
+
+    <div id="alert-box">
+    </div>
+    <script src="script.js"></script>
+    <script src="uploadFile.js"></script>
+    <script src="sendEmail.js"></script>
+</body>
+</html>

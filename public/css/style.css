@@ -1,7 +1,7 @@
 :root {
-    --main-bg-color: #edf5fe;
-    --light-blue: #03a9f4;
-    --dark-blue: #028bca;
+    --main-bg-color: #F3F4FD;
+    --light-blue: #7D6BFB;
+    --dark-blue: #5940ff;
   }
 
   body {
@@ -15,12 +15,6 @@
     color: #333;
   }
 
-  .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 150px;
-  }
 section.download {
     background: #fff;
     width: 430px;
