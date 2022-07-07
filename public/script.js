@@ -34,7 +34,7 @@ uploadContainer.addEventListener('drop',(e)=>{
     e.preventDefault();
     icon.classList.remove('icon-animation');
     uploadContainer.classList.remove('bg-changer');
-
+    showAlert("File is Dropped")
     files=e.dataTransfer.files;
     if(files.length >1){
         showAlert("You can't upload multiple files");
@@ -49,6 +49,7 @@ browserBtn.addEventListener('click',()=>{
 })
 
 fileInput.addEventListener('change',()=>{
+    showAlert("File is Selected")
 
     if(fileInput.files[0].size > maxAllowedSize){
         // Show error
